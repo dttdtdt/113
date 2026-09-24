@@ -12,4 +12,6 @@ public partial class CardSo : Resource
 	[Export]
 	public CardOccupation Occupation;
 	
+	[Export]
+	public Rarity CardRarity;
 }

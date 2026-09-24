@@ -9,10 +9,24 @@ public enum CardOccupation
 	priest
 }
 
-public enum CardClass
+public enum CardType
 {
 	normal,
 	ability,
-	Curse,
-	consume
+	Curse
+}
+
+public enum Rarity
+{
+	normal,
+	rare,
+	super rare,
+	legendary,
+	epic
+}
+
+public enum CardAttribute
+{
+	cost,
+	cardtype
 }
