@@ -6,27 +6,38 @@ public enum CardOccupation
 	warrior,
 	ranger,
 	caster,
-	priest
+	priest,
 }
 
 public enum CardType
 {
 	normal,
 	ability,
-	Curse
+	Curse,
 }
 
 public enum Rarity
 {
 	normal,
 	rare,
-	super rare,
+	superrare,
 	legendary,
-	epic
+	epic,
 }
 
 public enum CardAttribute
 {
 	cost,
-	cardtype
+	damage,
+	defense,
+	restore,
+}
+
+
+public enum DataOperation
+{
+	Addition,
+	Minus,
+	Multiply,
+	Division,
 }

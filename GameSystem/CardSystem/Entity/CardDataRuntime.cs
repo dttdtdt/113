@@ -1,14 +1,12 @@
 using Godot;
 using System;
-
+using System.Collections.Generic;
 public partial class CardDataRuntime
 {
-	private Dictionary<CardAttribute,CardAttributeData>
+	[Export]
+	private Dictionary<CardAttribute,CardAttributeData> CardProperty;
+	
 	[Export]
 	private CardSo baseCardInfo;
-	
-	[Export]
-	private short cost;
-	
 	
 }
