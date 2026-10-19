@@ -5,6 +5,8 @@ public partial class DrawDeck : Node
 {
 	private List<CardMono> cardList;
 	
+	private bool BattleOrManage;
+	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{

@@ -13,7 +13,7 @@ public partial class CardDataRuntime
 		{
 			CardProperty[key] = new CardAttributeData(new List<float>(value));
 		}
-		cost = template.cost;
+		cost = template.Cost;
 		
 	}
 }
