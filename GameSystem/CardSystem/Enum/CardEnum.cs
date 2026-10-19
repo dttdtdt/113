@@ -25,9 +25,10 @@ public enum Rarity
 	epic,
 }
 
-public enum CardAttribute
+public enum CardEffect
 {
-	cost,
+	drawCard,
+	restorecost,
 	damage,
 	defense,
 	restore,

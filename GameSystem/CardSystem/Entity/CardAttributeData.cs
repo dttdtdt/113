@@ -1,46 +1,58 @@
-using Godot;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 public partial class CardAttributeData
 {
-	private float currentValue;
-	private float baseValue;//作用于记录卡牌属性的基础和当前值
-	private float AMall = 0.0f;
-	private float MDall = 1.0f;//以上两行标记加减总量，和乘除总量
-	public CardAttributeData(float value)
+	private List<float> currentValue;
+	private List<float> baseValue;
+	private List<float> AMall;
+	private List<float> MDall;
+
+	public CardAttributeData(List<float> value)
 	{
-		this.baseValue = value;
-		currentValue = value;
+		int count = value.Count;
+		baseValue = new List<float>(value);
+		currentValue = new List<float>(value);
+		AMall = Enumerable.Repeat(0.0f, count).ToList();
+		MDall = Enumerable.Repeat(1.0f, count).ToList();
 	}
-	public void SetCurrent()
+
+	public void AddBonus(int index, float value)
 	{
-		currentValue = (baseValue + AMall) * MDall;//永远先算加减再算乘除，因为我并不想让玩家去算buff最优牌序，先上buff，再打牌这就是最轻松的了，如果出现了存在优先级的buff，另外开一个计算函数
+		if (index < 0 || index >= AMall.Count) return;
+		AMall[index] += value;
 	}
-	public void Setbase(
-		DataOperation operate,//该参数决定对于基础数值的操作
-		float number
-	)
+
+	public void MultiplyBonus(int index, float value)
 	{
-		switch(operate)
+		if (index < 0 || index >= MDall.Count) return;
+		MDall[index] *= value;
+	}
+
+	public void Reset()
+	{
+		for (int i = 0; i < AMall.Count; i++) AMall[i] = 0.0f;
+		for (int i = 0; i < MDall.Count; i++) MDall[i] = 1.0f;
+		currentValue = new List<float>(baseValue);
+	}
+
+	public void SetAllCurrent()
+	{
+		for (int i = 0; i < baseValue.Count; i++)  // 去掉了 -1
 		{
-			case DataOperation.Addition:
-				baseValue += number;
-				break;
-			case DataOperation.Minus:
-				baseValue -= number;
-				break;
-			case DataOperation.Multiply:
-				baseValue *= number;
-				break;
-			case DataOperation.Division:
-				baseValue /= number;
-				break;
-			default:
-				break;
+			currentValue[i] = (baseValue[i] + AMall[i]) * MDall[i];
 		}
 	}
-	public float getCurrent()
+
+	public void SetAllBase(List<float> number)
 	{
-		return currentValue;
+		if (number == null || number.Count != baseValue.Count) return;
+		for (int i = 0; i < baseValue.Count; i++)  // 去掉了 -1
+		{
+			baseValue[i] = number[i];
+		}
 	}
+
+	public List<float> GetCurrent() => currentValue;
 }
