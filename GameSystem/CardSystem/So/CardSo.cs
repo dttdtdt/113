@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using Godot.Collections;
+
 public partial class CardSo : Resource
 {
 	[Export]
@@ -19,8 +20,11 @@ public partial class CardSo : Resource
 	public int Cost;
 	
 	[Export]
-	public Dictionary<CardEffect,Array<float>> Effects;
+	public Dictionary<EffectKeyResource,Array<float>> Effects;
 	
 	[Export]
 	public Array<string> Description;
+	
+	[Export]
+	public bool BattleOrManage;
 }
