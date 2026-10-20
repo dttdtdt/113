@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 public partial class CardDataRuntime
 {
-	private Dictionary<CardEffect,CardAttributeData> CardProperty = new();//效果数字计算器,负责记录并计算效果值
+	private Dictionary<EffectKeyResource,CardAttributeData> CardProperty = new();//效果数字计算器,负责记录并计算效果值
+	
+	private int cost;
 	
 	public CardDataRuntime(CardSo template)
 	{
@@ -11,5 +13,7 @@ public partial class CardDataRuntime
 		{
 			CardProperty[key] = new CardAttributeData(new List<float>(value));
 		}
+		cost = template.Cost;
+		
 	}
 }
