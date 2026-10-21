@@ -3,9 +3,9 @@ using System;
 
 public enum TriggerTurn
 {
-	none,
-	afterturn,
-	beforeturn,
+	nothing,
+	turnend,
+	turnstart,
 	afterbattle,
 	afterdraw,
 	aftertakedamage,

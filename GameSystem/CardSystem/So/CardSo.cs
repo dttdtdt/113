@@ -27,4 +27,7 @@ public partial class CardSo : Resource
 	
 	[Export]
 	public bool BattleOrManage;
+	
+	[Export]
+	public bool temp;
 }
