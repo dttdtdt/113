@@ -3,17 +3,7 @@ using System;
 
 public partial class DeckManager : Node
 {
-	[Export]
-	private Hand _HandDeck;
 	
-	[Export]
-	private DrawDeck _DrawDeck;
-	
-	[Export]
-	private DiscardPile _DiscardPile;
-	
-	[Export]
-	private SharePool _SharePool;
 	
 	public void DrawCardFromDeck(Deck deck1, Deck deck2)//卡组1获得卡牌，从卡组2
 	{

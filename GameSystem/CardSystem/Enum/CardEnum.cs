@@ -35,10 +35,10 @@ public enum CardEffect
 }
 
 
-public enum DataOperation
+public enum OutOrIn
 {
-	Addition,
-	Minus,
-	Multiply,
-	Division,
+	Both,
+	Out,
+	In,
+	Neither,
 }

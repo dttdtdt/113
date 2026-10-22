@@ -1,9 +1,9 @@
 using Godot;
 using System;
 using System.Collections.Generic;
-public partial class Deck : Node
+public partial class Deck : RefCounted
 {
-	internal List<CardMono> cardList;
+	internal List<CardMono> cardList = new List<CardMono>();
 	
 	private bool BattleOrManage;
 	
@@ -48,8 +48,4 @@ public partial class Deck : Node
 		}
 	}
 	
-	public override void _Ready()
-	{
-		cardList = new List<CardMono>();
-	}
 }

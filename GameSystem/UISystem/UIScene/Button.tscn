@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ywix00eytksp"]
+
+[node name="Button" type="Button" unique_id=962137680]
+offset_right = 45.0
+offset_bottom = 35.0
+text = "点"
