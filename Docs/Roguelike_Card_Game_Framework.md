@@ -6,7 +6,7 @@
 
 - 《杀戮尖塔》的卡牌构筑、随机地图、遗物、事件、Boss
 - 《暗黑地牢》的队伍、角色位置、状态、压力、职业体系
-- Roguelike 的随机生成、Build 构筑、永久成长
+-  Roguelike 的随机生成、Build 构筑、永久成长
 
 的独立游戏。
 
@@ -126,12 +126,12 @@ Meta Progression
 ```csharp
 class Fireball : Card
 {
-    void Play()
-    {
-        enemy.hp -= 10;
-        player.energy -= 1;
-        enemy.ApplyBurn();
-    }
+	void Play()
+	{
+		enemy.hp -= 10;
+		player.energy -= 1;
+		enemy.ApplyBurn();
+	}
 }
 ```
 
@@ -157,8 +157,8 @@ Fireball
 ├── Target = SingleEnemy
 │
 └── Effects
-    ├── DealDamage(10)
-    └── ApplyBurn(2)
+	├── DealDamage(10)
+	└── ApplyBurn(2)
 ```
 
 逻辑统一交给：
@@ -207,22 +207,22 @@ Art
 
 ```json
 {
-    "id": "warrior_slash",
-    "name": "重击",
-    "cost": 1,
-    "type": "Attack",
-    "target": "SingleEnemy",
-    "rarity": "Common",
-    "tags": [
-        "Physical",
+	"id": "warrior_slash",
+	"name": "重击",
+	"cost": 1,
+	"type": "Attack",
+	"target": "SingleEnemy",
+	"rarity": "Common",
+	"tags": [
+		"Physical",
         "Melee"
-    ],
-    "effects": [
-        {
-            "type": "Damage",
-            "value": 8
-        }
-    ]
+	],
+	"effects": [
+		{
+			"type": "Damage",
+			"value": 8
+		}
+	]
 }
 ```
 
@@ -230,10 +230,10 @@ Art
 
 ```json
 {
-    "upgrade": {
-        "damage": 12,
-        "cost": 1
-    }
+	"upgrade": {
+		"damage": 12,
+		"cost": 1
+	}
 }
 ```
 
@@ -445,16 +445,16 @@ THEN ApplyBuff("Rage", 1)
 
 ```json
 {
-    "trigger": "CardPlayed",
-    "condition": {
-        "tag": "Poison"
-    },
-    "effects": [
-        {
-            "type": "DrawCard",
-            "value": 1
-        }
-    ]
+	"trigger": "CardPlayed",
+	"condition": {
+		"tag": "Poison"
+	},
+	"effects": [
+		{
+			"type": "DrawCard",
+			"value": 1
+		}
+	]
 }
 ```
 
@@ -530,13 +530,13 @@ if (fear) ...
 
 ```text
 StatusManager
-    ↓
+	↓
 Status
-    ├── Poison
-    ├── Bleed
-    ├── Burn
-    ├── Weak
-    └── Fear
+	├── Poison
+	├── Bleed
+	├── Burn
+	├── Weak
+	└── Fear
 ```
 
 每个 Status 自己声明自己监听哪些事件，以及事件发生时产生什么效果。
@@ -1113,11 +1113,11 @@ Shop RNG
 
 ```text
 Master Seed
-    ↓
-    ├── Map Seed
-    ├── Combat Seed
-    ├── Event Seed
-    └── Reward Seed
+	↓
+	├── Map Seed
+	├── Combat Seed
+	├── Event Seed
+	└── Reward Seed
 ```
 
 这样可以实现：
@@ -1136,21 +1136,21 @@ Master Seed
 
 ```json
 {
-    "version": 12,
-    "run": {
-        "seed": 839102,
-        "floor": 7,
-        "gold": 124
-    },
-    "deck": [
-        "strike",
-        "strike",
-        "defend",
+	"version": 12,
+	"run": {
+		"seed": 839102,
+		"floor": 7,
+		"gold": 124
+	},
+	"deck": [
+		"strike",
+		"strike",
+		"defend",
         "fireball"
-    ],
-    "relics": [
+	],
+	"relics": [
         "blood_ring"
-    ]
+	]
 }
 ```
 
@@ -1225,11 +1225,11 @@ Game
 │   └── Camera
 │
 └── Content
-    ├── Cards
-    ├── Enemies
-    ├── Relics
-    ├── Characters
-    └── Events
+	├── Cards
+	├── Enemies
+	├── Relics
+	├── Characters
+	└── Events
 ```
 
 ---
@@ -1243,7 +1243,7 @@ Game
 ```csharp
 public interface IEffect
 {
-    void Execute(GameContext context);
+	void Execute(GameContext context);
 }
 ```
 
@@ -1252,7 +1252,7 @@ public interface IEffect
 ```csharp
 public interface ICondition
 {
-    bool Evaluate(GameContext context);
+	bool Evaluate(GameContext context);
 }
 ```
 
@@ -1261,12 +1261,12 @@ public interface ICondition
 ```csharp
 public interface ITrigger
 {
-    GameEventType EventType { get; }
+	GameEventType EventType { get; }
 
-    void OnEvent(
-        GameEvent gameEvent,
-        GameContext context
-    );
+	void OnEvent(
+		GameEvent gameEvent,
+		GameContext context
+	);
 }
 ```
 
@@ -1275,7 +1275,7 @@ public interface ITrigger
 ```csharp
 public interface IAction
 {
-    void Execute(GameContext context);
+	void Execute(GameContext context);
 }
 ```
 
@@ -1284,7 +1284,7 @@ public interface IAction
 ```csharp
 public interface ITargetSelector
 {
-    IEnumerable<Entity> Select(GameContext context);
+	IEnumerable<Entity> Select(GameContext context);
 }
 ```
 
@@ -1474,31 +1474,31 @@ Town Upgrade
 
 ```text
 ① GameState
-      ↓
+	  ↓
 ② Entity / Character
-      ↓
+	  ↓
 ③ Effect System
-      ↓
+	  ↓
 ④ Status System
-      ↓
+	  ↓
 ⑤ Combat
-      ↓
+	  ↓
 ⑥ Card
-      ↓
+	  ↓
 ⑦ Enemy AI
-      ↓
+	  ↓
 ⑧ Reward
-      ↓
+	  ↓
 ⑨ Map
-      ↓
+	  ↓
 ⑩ Event
-      ↓
+	  ↓
 ⑪ Shop
-      ↓
+	  ↓
 ⑫ Save
-      ↓
+	  ↓
 ⑬ UI
-      ↓
+	  ↓
 ⑭ Animation / VFX / Audio
 ```
 
@@ -1623,15 +1623,15 @@ SaveManager
 
 ```text
 创建新卡牌
-    ↓
+	↓
 创建 CardData
-    ↓
+	↓
 配置 Effect
-    ↓
+	↓
 配置 Condition
-    ↓
+	↓
 配置 Keyword
-    ↓
+	↓
 完成
 ```
 
@@ -1639,17 +1639,17 @@ SaveManager
 
 ```text
 创建新卡牌
-    ↓
+	↓
 写一套新的 C# 逻辑
-    ↓
+	↓
 修改 CombatManager
-    ↓
+	↓
 修改 UI
-    ↓
+	↓
 修改 Status
-    ↓
+	↓
 修改 Enemy
-    ↓
+	↓
 开始出现 Bug
 ```
 
@@ -1664,36 +1664,36 @@ SaveManager
 最终结构：
 
 ```text
-             ┌──────────────┐
-             │   Content    │
-             │Card/Enemy... │
-             └──────┬───────┘
-                    ↓
-             ┌──────────────┐
-             │    Rules     │
-             │Condition     │
-             │Trigger       │
-             │Status        │
-             └──────┬───────┘
-                    ↓
-             ┌──────────────┐
-             │    Effect    │
-             │Damage/Heal   │
-             │Draw/Move...  │
-             └──────┬───────┘
-                    ↓
-             ┌──────────────┐
-             │    Action    │
-             └──────┬───────┘
-                    ↓
-             ┌──────────────┐
-             │  GameState   │
-             └──────┬───────┘
-                    ↓
-             ┌──────────────┐
-             │ Presentation │
-             │ UI/VFX/Audio │
-             └──────────────┘
+			 ┌──────────────┐
+			 │   Content    │
+			 │Card/Enemy... │
+			 └──────┬───────┘
+					↓
+			 ┌──────────────┐
+			 │    Rules     │
+			 │Condition     │
+			 │Trigger       │
+			 │Status        │
+			 └──────┬───────┘
+					↓
+			 ┌──────────────┐
+			 │    Effect    │
+			 │Damage/Heal   │
+			 │Draw/Move...  │
+			 └──────┬───────┘
+					↓
+			 ┌──────────────┐
+			 │    Action    │
+			 └──────┬───────┘
+					↓
+			 ┌──────────────┐
+			 │  GameState   │
+			 └──────┬───────┘
+					↓
+			 ┌──────────────┐
+			 │ Presentation │
+			 │ UI/VFX/Audio │
+			 └──────────────┘
 ```
 
 这套结构可以作为一个通用的：
