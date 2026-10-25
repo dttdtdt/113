@@ -35,11 +35,13 @@ public partial class CardUIBound : Control
 	{
 		if (!IsNodeReady() || _data == null) return;
 
-		LabelName.Text = _data.GetBaseCardInfo().name ?? "";
+		CardSo info = _data.GetBaseCardInfo();
+
+		LabelName.Text = info.GetCardName() ?? "";
 		Cost.Text = _data.GetCardData().GetCost().ToString();
-		Picture.Texture = _data.GetBaseCardInfo().CardImage;
-		CardClass.Text = _data.GetBaseCardInfo().cardType.ToString() ?? "";
-		CardColor.Color = CardOccupationToColor.Get(_data.GetBaseCardInfo().Occupation);
-		CardDescription.Text = StringMontage.Montage(_data.GetBaseCardInfo().Description); 
+		Picture.Texture = info.GetCardImage();
+		CardClass.Text = info.GetCardType().ToString() ?? "";
+		CardColor.Color = CardOccupationToColor.Get(info.GetOccupation());
+		CardDescription.Text = StringMontage.Montage(info.GetDescription());
 	}
 }

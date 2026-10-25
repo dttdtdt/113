@@ -27,11 +27,11 @@ public partial class CardDataRuntime
 
 	public CardDataRuntime(CardSo template)
 	{
-		foreach(var (key, value) in template.Effects)
+		foreach(var (key, value) in template.GetEffects())
 		{
 			CardProperty[key] = new CardAttributeData(new List<float>(value));
 		}
-		cost = template.Cost;
+		cost = template.GetCost();
 		
 	}
 }
