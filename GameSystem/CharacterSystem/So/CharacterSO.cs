@@ -3,10 +3,10 @@ using System;
 
 public partial class CharacterSO : Resource
 {
-	[Export] public int Health;
-	[Export] public int Strength;
-	[Export] public int Durability；
-	[Export] public int Psycho;
-	[Export] public int Faith;
-	[Export] public int Luck;
+	[Export] private int Health{get;set;}
+	[Export] private int Strength{get;set;}
+	[Export] private int Durability{get;set;}
+	[Export] private int Psycho{get;set;}
+	[Export] private int Faith{get;set;}
+	[Export] private int Luck{get;set;}
 }

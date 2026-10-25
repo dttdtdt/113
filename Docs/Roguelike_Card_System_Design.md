@@ -127,21 +127,21 @@ UniqueID = 48A2D9
 ```csharp
 public class CardDefinition
 {
-    public string Id;
-    public string Name;
-    public string Description;
+	public string Id;
+	public string Name;
+	public string Description;
 
-    public int BaseCost;
+	public int BaseCost;
 
-    public CardType Type;
-    public CardRarity Rarity;
-    public TargetType TargetType;
+	public CardType Type;
+	public CardRarity Rarity;
+	public TargetType TargetType;
 
-    public List<CardTag> Tags;
-    public List<EffectDefinition> Effects;
-    public List<ConditionDefinition> Conditions;
+	public List<CardTag> Tags;
+	public List<EffectDefinition> Effects;
+	public List<ConditionDefinition> Conditions;
 
-    public CardUpgradeData UpgradeData;
+	public CardUpgradeData UpgradeData;
 }
 ```
 
@@ -150,12 +150,12 @@ public class CardDefinition
 ```csharp
 public class CardInstance
 {
-    public string UniqueId;
-    public string DefinitionId;
+	public string UniqueId;
+	public string DefinitionId;
 
-    public int UpgradeLevel;
+	public int UpgradeLevel;
 
-    public List<Modifier> Modifiers;
+	public List<Modifier> Modifiers;
 }
 ```
 
@@ -412,7 +412,7 @@ CostDefinition
 ```csharp
 public class CardCost
 {
-    public List<ResourceCost> Costs;
+	public List<ResourceCost> Costs;
 }
 ```
 
@@ -420,16 +420,16 @@ public class CardCost
 
 ```json
 {
-    "costs": [
-        {
-            "resource": "Energy",
-            "value": 2
-        },
-        {
-            "resource": "HP",
-            "value": 5
-        }
-    ]
+	"costs": [
+		{
+			"resource": "Energy",
+			"value": 2
+		},
+		{
+			"resource": "HP",
+			"value": 5
+		}
+	]
 }
 ```
 
@@ -652,8 +652,8 @@ Damage = 8 + Strength × 2
 Add
 ├── Constant(8)
 └── Multiply
-    ├── Stat(Strength)
-    └── Constant(2)
+	├── Stat(Strength)
+	└── Constant(2)
 ```
 
 这样设计之后，复杂卡牌几乎都能数据化。
@@ -917,13 +917,13 @@ Attack + Bleed
 
 ```json
 {
-    "upgrade": {
-        "cost": -1,
-        "damage": +2,
-        "addTags": [
+	"upgrade": {
+		"cost": -1,
+		"damage": +2,
+		"addTags": [
             "Bleed"
-        ]
-    }
+		]
+	}
 }
 ```
 
@@ -931,14 +931,14 @@ Attack + Bleed
 
 ```json
 {
-    "upgrade": {
-        "addEffects": [
-            {
-                "type": "DrawCard",
-                "value": 1
-            }
-        ]
-    }
+	"upgrade": {
+		"addEffects": [
+			{
+				"type": "DrawCard",
+				"value": 1
+			}
+		]
+	}
 }
 ```
 
@@ -1838,13 +1838,13 @@ Combat State
 
 ```text
 if Energy < Cost
-    CannotPlay
+	CannotPlay
 
 if NoValidTarget
-    CannotPlay
+	CannotPlay
 
 if ConditionFailed
-    CannotPlay
+	CannotPlay
 ```
 
 UI 只读取：
@@ -1964,8 +1964,8 @@ Cards/
 │   └── backstab.json
 │
 └── common/
-    ├── defend.json
-    └── draw.json
+	├── defend.json
+	└── draw.json
 ```
 
 ---
@@ -1976,36 +1976,36 @@ Cards/
 
 ```json
 {
-    "id": "blood_lance",
-    "name": "血枪",
-    "type": "Attack",
-    "rarity": "Common",
-    "cost": {
-        "energy": 1
-    },
-    "target": {
-        "type": "SingleEnemy"
-    },
-    "tags": [
-        "Physical",
-        "Melee",
+	"id": "blood_lance",
+	"name": "血枪",
+	"type": "Attack",
+	"rarity": "Common",
+	"cost": {
+		"energy": 1
+	},
+	"target": {
+		"type": "SingleEnemy"
+	},
+	"tags": [
+		"Physical",
+		"Melee",
         "Bleed"
-    ],
-    "effects": [
-        {
-            "type": "Damage",
-            "value": 8
-        },
-        {
-            "type": "ApplyStatus",
-            "status": "Bleed",
-            "value": 2
-        }
-    ],
-    "upgrade": {
-        "damage": 11,
-        "bleed": 3
-    }
+	],
+	"effects": [
+		{
+			"type": "Damage",
+			"value": 8
+		},
+		{
+			"type": "ApplyStatus",
+			"status": "Bleed",
+			"value": 2
+		}
+	],
+	"upgrade": {
+		"damage": 11,
+		"bleed": 3
+	}
 }
 ```
 
@@ -2307,35 +2307,35 @@ Phase 6
 最终建议形成：
 
 ```text
-                      CardDefinition
-                            │
-                            ↓
-                      CardInstance
-                            │
-                      ┌─────┴─────┐
-                      ↓           ↓
-                   Cost       Playability
-                                    │
-                       ┌────────────┼────────────┐
-                       ↓            ↓            ↓
-                    Target      Condition      Keyword
-                       │            │            │
-                       └────────────┼────────────┘
-                                    ↓
-                                  Effect
-                                    │
-                                    ↓
-                                  Action
-                                    │
-                                    ↓
-                                GameState
-                                    │
-                                    ↓
-                                EventBus
-                                    │
-                    ┌───────────────┼───────────────┐
-                    ↓               ↓               ↓
-                  Relic           Status           Trigger
+					  CardDefinition
+							│
+							↓
+					  CardInstance
+							│
+					  ┌─────┴─────┐
+					  ↓           ↓
+				   Cost       Playability
+									│
+					   ┌────────────┼────────────┐
+					   ↓            ↓            ↓
+					Target      Condition      Keyword
+					   │            │            │
+					   └────────────┼────────────┘
+									↓
+								  Effect
+									│
+									↓
+								  Action
+									│
+									↓
+								GameState
+									│
+									↓
+								EventBus
+									│
+					┌───────────────┼───────────────┐
+					↓               ↓               ↓
+				  Relic           Status           Trigger
 ```
 
 ---
@@ -2404,13 +2404,13 @@ Tags
 
 ```text
 CardDefinition
-        ↓
+		↓
 Effect
-        ↓
+		↓
 Target
-        ↓
+		↓
 Condition
-        ↓
+		↓
 CardManager
 ```
 
