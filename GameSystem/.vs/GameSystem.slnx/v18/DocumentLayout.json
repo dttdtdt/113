@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Thunderobot\\Documents\\GitHub\\113\\GameSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Thunderobot\\Documents\\GitHub\\113\\GameSystem\\CharacterSystem\\Mono\\CharacterMono.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CharacterSystem\\Mono\\CharacterMono.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Thunderobot\\Documents\\GitHub\\113\\GameSystem\\CharacterSystem\\Enum\\CharacterEnum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CharacterSystem\\Enum\\CharacterEnum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Thunderobot\\Documents\\GitHub\\113\\GameSystem\\CharacterSystem\\Enum\\CharacterEnum.cs.uid||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CharacterSystem\\Enum\\CharacterEnum.cs.uid||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Thunderobot\\Documents\\GitHub\\113\\GameSystem\\CharacterSystem\\Entity\\CharacterRuntimeData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CharacterSystem\\Entity\\CharacterRuntimeData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Thunderobot\\Documents\\GitHub\\113\\GameSystem\\CharacterSystem\\Entity\\CharacterDataAttribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CharacterSystem\\Entity\\CharacterDataAttribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CharacterEnum.cs.uid",
+              "DocumentMoniker": "C:\\Users\\Thunderobot\\Documents\\GitHub\\113\\GameSystem\\CharacterSystem\\Enum\\CharacterEnum.cs.uid",
+              "RelativeDocumentMoniker": "CharacterSystem\\Enum\\CharacterEnum.cs.uid",
+              "ToolTip": "C:\\Users\\Thunderobot\\Documents\\GitHub\\113\\GameSystem\\CharacterSystem\\Enum\\CharacterEnum.cs.uid",
+              "RelativeToolTip": "CharacterSystem\\Enum\\CharacterEnum.cs.uid",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-26T12:41:09.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CharacterMono.cs",
+              "DocumentMoniker": "C:\\Users\\Thunderobot\\Documents\\GitHub\\113\\GameSystem\\CharacterSystem\\Mono\\CharacterMono.cs",
+              "RelativeDocumentMoniker": "CharacterSystem\\Mono\\CharacterMono.cs",
+              "ToolTip": "C:\\Users\\Thunderobot\\Documents\\GitHub\\113\\GameSystem\\CharacterSystem\\Mono\\CharacterMono.cs",
+              "RelativeToolTip": "CharacterSystem\\Mono\\CharacterMono.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAowAwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T09:59:49.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CharacterEnum.cs",
+              "DocumentMoniker": "C:\\Users\\Thunderobot\\Documents\\GitHub\\113\\GameSystem\\CharacterSystem\\Enum\\CharacterEnum.cs",
+              "RelativeDocumentMoniker": "CharacterSystem\\Enum\\CharacterEnum.cs",
+              "ToolTip": "C:\\Users\\Thunderobot\\Documents\\GitHub\\113\\GameSystem\\CharacterSystem\\Enum\\CharacterEnum.cs",
+              "RelativeToolTip": "CharacterSystem\\Enum\\CharacterEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T09:59:48.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CharacterRuntimeData.cs",
+              "DocumentMoniker": "C:\\Users\\Thunderobot\\Documents\\GitHub\\113\\GameSystem\\CharacterSystem\\Entity\\CharacterRuntimeData.cs",
+              "RelativeDocumentMoniker": "CharacterSystem\\Entity\\CharacterRuntimeData.cs",
+              "ToolTip": "C:\\Users\\Thunderobot\\Documents\\GitHub\\113\\GameSystem\\CharacterSystem\\Entity\\CharacterRuntimeData.cs",
+              "RelativeToolTip": "CharacterSystem\\Entity\\CharacterRuntimeData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T09:59:46.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CharacterDataAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\Thunderobot\\Documents\\GitHub\\113\\GameSystem\\CharacterSystem\\Entity\\CharacterDataAttribute.cs",
+              "RelativeDocumentMoniker": "CharacterSystem\\Entity\\CharacterDataAttribute.cs",
+              "ToolTip": "C:\\Users\\Thunderobot\\Documents\\GitHub\\113\\GameSystem\\CharacterSystem\\Entity\\CharacterDataAttribute.cs",
+              "RelativeToolTip": "CharacterSystem\\Entity\\CharacterDataAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T09:59:45.111Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
