@@ -7,6 +7,8 @@ public partial class CharacterMono : Node
 	private CharacterRuntimeData runtimeData;
 	
 	private List<CharacterEnum> Occupation = new();
+	
+	private Model Anim;
 
 	public override void _Ready()
 	{
@@ -14,6 +16,7 @@ public partial class CharacterMono : Node
 		{
 			runtimeData = new CharacterRuntimeData(characterSO);
 			Occupation.Add(characterSO.GetCharacterType());
+			Anim.SetCardFrames(characterSO.GetCardFrames());
 		}
 			
 	}

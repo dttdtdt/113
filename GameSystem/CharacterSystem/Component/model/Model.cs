@@ -3,7 +3,7 @@ using System;
 
 public partial class Model : Node
 {
-	[Export] public SpriteFrames CardFrames { get; set; }
+	private SpriteFrames CardFrames { get; set; }
 	private AnimatedSprite2D _sprite;
 	
 	private Vector2 position;
@@ -33,4 +33,6 @@ public partial class Model : Node
 			return;
 		 _sprite.Play(status.ToString());
 	}
+	
+	public void SetCardFrames(SpriteFrames a) => CardFrames = a;
 }

@@ -10,6 +10,7 @@ public partial class CharacterSO : Resource
 	[Export] private int Faith{get;set;}
 	[Export] private int Luck{get;set;}
 	[Export] private CharacterEnum CharacterType { get; set; }
+	[Export] private SpriteFrames CardFrames { get; set; }
 	
 
 	public int GetHealth() => Health;
@@ -19,4 +20,5 @@ public partial class CharacterSO : Resource
 	public int GetFaith() => Faith;
 	public int GetLuck() => Luck;
 	public CharacterEnum GetCharacterType() => CharacterType;
+	public SpriteFrames GetCardFrames() => CardFrames;
 }
