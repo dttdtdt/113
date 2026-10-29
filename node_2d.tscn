@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cfvujyc6fh6qu" path="res://GameSystem/Utils/Text/TextButton.cs" id="2_epypp"]
 [ext_resource type="Resource" uid="uid://b2xjh14sntqn1" path="res://SO/CardSO/Card1.tres" id="3_kdubu"]
 [ext_resource type="Script" uid="uid://cb2sfr5hctptp" path="res://GameSystem/UISystem/UIManager/UIManager.cs" id="4_d21ai"]
-[ext_resource type="Script" uid="uid://d2ipfmhdgt2rk" path="res://GameSystem/Utils/UIPool.cs" id="5_rj586"]
+[ext_resource type="Script" uid="uid://d2ipfmhdgt2rk" path="res://GameSystem/UISystem/UIManager/UIPool.cs" id="5_rj586"]
 [ext_resource type="PackedScene" uid="uid://bv04v2du6ub24" path="res://GameSystem/UISystem/UIScene/卡牌.tscn" id="6_4d7sh"]
 
 [node name="Node2D" type="Node" unique_id=1836132976]
