@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 public class EventBus
 {
-	private readonly Dictionary<TriggerTurn, List<Trigger> _handlers = new();
+	private readonly Dictionary<TriggerTurn, List<Trigger>> _handlers = new();
 
 	public void Subscribe(Trigger trigger)
 	{
