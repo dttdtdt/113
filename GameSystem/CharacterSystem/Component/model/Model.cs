@@ -1,24 +1,16 @@
 using Godot;
 using System;
 
-public partial class Model : Node
+public partial class Model : Resource
 {
-	private SpriteFrames CardFrames { get; set; }
-	private AnimatedSprite2D _sprite;
+	[Export] private AnimatedSprite2D _sprite;
 	
 	private Vector2 position;
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		_sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-
-		if (CardFrames != null)
-		{
-			_sprite.SpriteFrames = CardFrames;
-		}
-
-		Play(CharacterStatus.idle);
+		Play((CharacterStatus.idle).ToString());
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
