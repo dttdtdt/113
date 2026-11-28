@@ -1,0 +1,6 @@
+[gd_resource type="Resource" format=3 uid="uid://b45isbb8qjph2"]
+
+[ext_resource type="Script" uid="uid://dy3roepm0k4hi" path="res://GameSystem/CardSystem/So/EffectKeyResource.cs" id="1_soeiw"]
+
+[resource]
+script = ExtResource("1_soeiw")

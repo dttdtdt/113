@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3 uid="uid://b2xjh14sntqn1"]
+
+[ext_resource type="Texture2D" uid="uid://oya8wpn6jmc8" path="res://icon.svg" id="1_203yt"]
+[ext_resource type="Script" uid="uid://bmupk34vvvqtp" path="res://GameSystem/CardSystem/So/CardSo.cs" id="2_dl4ok"]
+
+[resource]
+script = ExtResource("2_dl4ok")
+name = "哈哈"
+CardImage = ExtResource("1_203yt")
+Cost = 1
+Effects = Dictionary[Resource, Array]({})
+Description = Array[String](["我是"])
+BattleOrManage = true
