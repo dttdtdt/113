@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f963f08c6e4efa81c53528d45375cc, type: 3}
+  m_Name: TrainingStrike
+  m_EditorClassIdentifier: GameSystem::GameSystem.CardSystem.Card.So.CardSo
+  cardName: "\u57FA\u7840\u6253\u51FB"
+  cardImage: {fileID: 0}
+  cardType: 0
+  occupation: 0
+  cardRarity: 0
+  cost: 2
+  effects: []
+  description:
+  - "\u9020\u6210 6 \u70B9\u4F24\u5BB3\u3002"
+  - "\u7EC3\u4E60\u6325\u51FB\uFF0C\u5BFB\u627E\u654C\u4EBA\u7684\u7834\u7EFD\u3002"
+  battleOrManage: 0
+  temp: 0
+  cardClass: 0

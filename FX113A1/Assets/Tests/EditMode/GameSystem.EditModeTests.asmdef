@@ -1,0 +1,7 @@
+{
+    "name": "GameSystem.EditModeTests",
+    "rootNamespace": "GameSystem.Tests",
+    "references": ["GameSystem", "UnityEngine.UI", "Unity.TextMeshPro"],
+    "includePlatforms": ["Editor"],
+    "optionalUnityReferences": ["TestAssemblies"]
+}
