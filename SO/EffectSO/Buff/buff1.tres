@@ -1,0 +1,6 @@
+[gd_resource type="Resource" format=3 uid="uid://bur6v7omme6bq"]
+
+[ext_resource type="Script" uid="uid://dlrtklmysyma" path="res://GameSystem/CardSystem/Effect/impact/BuffSo.cs" id="1_6pcyq"]
+
+[resource]
+script = ExtResource("1_6pcyq")

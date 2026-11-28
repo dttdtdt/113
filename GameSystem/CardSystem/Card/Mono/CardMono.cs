@@ -25,7 +25,7 @@ public partial class CardMono : RefCounted
 	private void NotifyDataChanged() => DataChanged?.Invoke();
 
 	//加法修正（自动重算 current）
-	public void AddEffectBonus(EffectKeyResource effect, int index, float value)
+	public void AddEffectBonus(Effect effect, int index, float value)
 	{
 		if (CardData.TryGetEffect(effect, out var data))
 		{
@@ -36,7 +36,7 @@ public partial class CardMono : RefCounted
 	}
 
 	//乘法修正（自动重算 current）
-	public void MultiplyEffectBonus(EffectKeyResource effect, int index, float value)
+	public void MultiplyEffectBonus(Effect effect, int index, float value)
 	{
 		if (CardData.TryGetEffect(effect, out var data))
 		{
@@ -47,7 +47,7 @@ public partial class CardMono : RefCounted
 	}
 
 	//修改效果基础值
-	public void SetEffectBase(EffectKeyResource effect, List<float> values)
+	public void SetEffectBase(Effect effect, List<float> values)
 	{
 		if (CardData.TryGetEffect(effect, out var data))
 		{
@@ -58,7 +58,7 @@ public partial class CardMono : RefCounted
 	}
 
 	//重置单个效果
-	public void ResetEffect(EffectKeyResource effect)
+	public void ResetEffect(Effect effect)
 	{
 		if (CardData.TryGetEffect(effect, out var data))
 		{
